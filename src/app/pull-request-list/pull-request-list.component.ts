@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 
-import { DataService } from './data.service';
-import { PullRequest } from './types';
+import { DataService } from '../data.service';
+import { PullRequest } from '../types';
 
 @Component({
   selector: 'app-pull-request-list',
