@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 
 import { PullRequest } from './types';
@@ -16,4 +17,10 @@ export class DataService {
       updated: new Date(2019, 2, 7, 11, 40)
     }
   ];
+
+  constructor(private http: HttpClient) {}
+
+  getPullRequests() {
+    return this.http.get('/api/pulls');
+  }
 }

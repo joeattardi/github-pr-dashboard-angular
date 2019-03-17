@@ -1,3 +1,5 @@
+const DEFAULT_PORT = 9000;
+
 require('dotenv').config();
 
 const express = require('express');
@@ -10,6 +12,8 @@ const app = express();
 
 app.get('/api/pulls', pullsRoute);
 
-app.listen(process.env.PORT, () => {
-  process.stdout.write(`Listening on port ${process.env.PORT}\n`);
+const port = process.env.port || DEFAULT_PORT;
+
+app.listen(port, () => {
+  process.stdout.write(`Listening on port ${port}\n`);
 });

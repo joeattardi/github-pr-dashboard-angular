@@ -7,6 +7,8 @@ module.exports = async function pulls(req, res) {
     }
   });
 
+  const pullRequests = [];
+
   const query = `{
     repository(owner: "angular", name: "angular") {
       pullRequests(states: [OPEN], first: 100, orderBy: { direction: DESC, field: UPDATED_AT }) {
@@ -33,5 +35,7 @@ module.exports = async function pulls(req, res) {
 
   const data = await client.request(query);
 
-  res.json(data);
+  data.repository.pullRequests.nodes.forEach(pr => pullRequests.push(pr));
+
+  res.json(pullRequests);
 };

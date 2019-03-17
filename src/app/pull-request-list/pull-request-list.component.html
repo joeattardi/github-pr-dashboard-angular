@@ -1,5 +1,9 @@
-<ul id="pull-request-list">
-  <li *ngFor="let pr of data">
+<div *ngIf="loading">
+  <app-spinner></app-spinner>
+</div>
+
+<ul id="pull-request-list" *ngIf="!loading">
+  <li *ngFor="let pr of pullRequests$ | async">
     <app-pull-request [pullRequest]="pr"></app-pull-request>
   </li>
 </ul>
