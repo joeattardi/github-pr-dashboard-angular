@@ -2,6 +2,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { PullRequestComponent } from './pull-request-list/pull-request/pull-request.component';
@@ -18,6 +20,7 @@ import { SpinnerComponent } from './spinner/spinner.component';
   ],
   imports: [
     BrowserModule,
+    FontAwesomeModule,
     HttpClientModule
   ],
   providers: [],

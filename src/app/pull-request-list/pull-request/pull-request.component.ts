@@ -1,5 +1,7 @@
 import { Component, Input } from '@angular/core';
 
+import { faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons';
+
 import { PullRequest } from '../../types';
 
 @Component({
@@ -8,5 +10,7 @@ import { PullRequest } from '../../types';
   styleUrls: ['./pull-request.component.scss']
 })
 export class PullRequestComponent {
+  faExternalLinkAlt = faExternalLinkAlt;
+
   @Input() pullRequest: PullRequest;
 }
