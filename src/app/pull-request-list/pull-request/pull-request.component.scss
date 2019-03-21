@@ -5,12 +5,14 @@
   margin: 0.5em;
   display: flex;
   flex-direction: row;
+  box-shadow: 0px 1px 1px 0px #AAAAAA;
 
   .pr-author-avatar {
-    width: 3em;
-    height: 3em;
+    width: 4em;
+    height: 4em;
     border-radius: 50%;
     margin-right: 0.5em;
+    align-self: center;
   }
 
   .pr-main-content {
@@ -22,9 +24,14 @@
         margin-left: 0.5em;
       }
     }
-  
+
     .pr-title {
       font-size: 1.25em;
     }
+  }
+
+  .pr-footer {
+    font-size: 0.8em;
+    color: #666666;
   }
 }

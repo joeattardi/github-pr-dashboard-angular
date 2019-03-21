@@ -10,5 +10,8 @@
     <div class="pr-metadata-container">
       <span class="repo-name">{{pullRequest.repository.owner.login}}/{{pullRequest.repository.name}}</span>
     </div>
+    <div class="pr-footer">
+      Opened by {{pullRequest.author.login}} <span [title]="pullRequest.createdAt">{{timeSinceCreated}}</span>
+    </div>
   </div>
 </div>
