@@ -27,6 +27,10 @@ module.exports = async function pulls(req, res) {
               login
             }
             name
+            url
+          }
+          comments {
+            totalCount
           }
         }
       }

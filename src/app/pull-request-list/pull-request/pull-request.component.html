@@ -2,16 +2,24 @@
   <img class="pr-author-avatar" [src]="pullRequest.author.avatarUrl">
   <div class="pr-main-content">
     <div class="pr-title-container">
+      <fa-icon [icon]="faCodeBranch"></fa-icon>
       <a class="pr-title-link" target="_blank" [href]="pullRequest.permalink">
         <span class="pr-title">{{pullRequest.title}}</span>
-        <fa-icon [icon]="faExternalLinkAlt"></fa-icon>
       </a>
     </div>
     <div class="pr-metadata-container">
-      <span class="repo-name">{{pullRequest.repository.owner.login}}/{{pullRequest.repository.name}}</span>
+      <fa-icon class="repo-icon" [icon]="faBook"></fa-icon>
+      <span class="repo-name"><a [href]="pullRequest.repository.url">{{pullRequest.repository.owner.login}}/{{pullRequest.repository.name}}</a> <span class="pr-number">#{{pullRequest.number}}</span></span>
+      <span class="pr-comments">
+        <fa-icon [icon]="faComment"></fa-icon> {{pullRequest.comments.totalCount}}
+      </span>
     </div>
     <div class="pr-footer">
       Opened by {{pullRequest.author.login}} <span [title]="pullRequest.createdAt">{{timeSinceCreated}}</span>
     </div>
+  </div>
+  <div class="pr-updated-at" [title]="pullRequest.updatedAt">
+    <div class="pr-updated-at-label">Last updated</div>
+    <div><fa-icon [icon]="faClock"></fa-icon> {{timeSinceUpdated}}</div>
   </div>
 </div>

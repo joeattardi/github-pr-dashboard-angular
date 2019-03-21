@@ -1,4 +1,5 @@
 .pr-container {
+  background: #FFFFFF;
   border: 1px solid #AAAAAA;
   border-radius: 3px;
   padding: 0.75em;
@@ -18,20 +19,73 @@
   .pr-main-content {
     display: flex;
     flex-direction: column;
+    flex-grow: 1;
 
-    .pr-title-link {
+    .pr-title-container {
+
       fa-icon {
+        margin-right: 0.25em;
+      }
+
+      .pr-title-link {
+        fa-icon {
+          margin-left: 0.5em;
+        }
+
+        color: #000000;
+        text-decoration: none;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+
+      .pr-title {
+        font-size: 1.25em;
+      }
+    }
+
+    .pr-metadata-container {
+      .repo-icon {
+        margin-right: 0.25em;
+      }
+
+      .repo-name {
+        a {
+          color: #000000;
+          text-decoration: none;
+
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+
+      .pr-number {
+        color: #999999;
+      }
+
+      .pr-comments {
         margin-left: 0.5em;
       }
     }
 
-    .pr-title {
-      font-size: 1.25em;
+    .pr-footer {
+      font-size: 0.8em;
+      color: #666666;
     }
   }
 
-  .pr-footer {
-    font-size: 0.8em;
-    color: #666666;
+  .pr-updated-at {
+    align-self: center;
+    background: #73A3C3;
+    padding: 0.5em;
+    border-radius: 10px;
+    color: #FFFFFF;
+    text-align: center;
+
+    .pr-updated-at-label {
+      font-size: 0.7em;
+    }
   }
 }
