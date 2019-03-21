@@ -9,7 +9,7 @@
     </div>
     <div class="pr-metadata-container">
       <fa-icon class="repo-icon" [icon]="faBook"></fa-icon>
-      <span class="repo-name"><a [href]="pullRequest.repository.url">{{pullRequest.repository.owner.login}}/{{pullRequest.repository.name}}</a> <span class="pr-number">#{{pullRequest.number}}</span></span>
+      <span class="repo-name"><a target="_blank" [href]="pullRequest.repository.url">{{pullRequest.repository.owner.login}}/{{pullRequest.repository.name}}</a> <span class="pr-number">#{{pullRequest.number}}</span></span>
       <span class="pr-comments">
         <fa-icon [icon]="faComment"></fa-icon> {{pullRequest.comments.totalCount}}
       </span>
