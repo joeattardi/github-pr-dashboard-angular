@@ -2,7 +2,7 @@ import { Component, Input } from '@angular/core';
 
 import dayjs from 'dayjs';
 import relativeTime from 'dayjs/plugin/relativeTime';
-import { faBook, faClock, faCodeBranch, faComment, faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons';
+import { faBook, faClock, faCodeBranch, faComment, faExternalLinkAlt, faLongArrowAltRight } from '@fortawesome/free-solid-svg-icons';
 
 import { PullRequest } from '../../types';
 
@@ -19,6 +19,7 @@ export class PullRequestComponent {
   faBook = faBook;
   faComment = faComment;
   faClock = faClock;
+  faLongArrowAltRight = faLongArrowAltRight;
 
   @Input() pullRequest: PullRequest;
 

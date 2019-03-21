@@ -6,6 +6,9 @@
       <a class="pr-title-link" target="_blank" [href]="pullRequest.permalink">
         <span class="pr-title">{{pullRequest.title}}</span>
       </a>
+      <span class="pr-base-ref">
+        <fa-icon [icon]="faLongArrowAltRight"></fa-icon> <span class="pr-branch-name">{{pullRequest.baseRefName}}</span>
+      </span>
     </div>
     <div class="pr-metadata-container">
       <fa-icon class="repo-icon" [icon]="faBook"></fa-icon>

@@ -7,6 +7,12 @@ export interface PullRequest {
   createdAt: Date;
   updatedAt: Date;
   permalink: string;
+  baseRefName: string;
+  participants: UserList[];
+}
+
+export interface UserList {
+  nodes: User[];
 }
 
 export interface Repository {

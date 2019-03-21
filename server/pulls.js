@@ -14,6 +14,7 @@ module.exports = async function pulls(req, res) {
       pullRequests(states: [OPEN], first: 100, orderBy: { direction: DESC, field: UPDATED_AT }) {
         nodes {
           title
+          baseRefName
           createdAt
           updatedAt
           number
@@ -31,6 +32,12 @@ module.exports = async function pulls(req, res) {
           }
           comments {
             totalCount
+          }
+          participants(first: 5) {
+            nodes {
+              login
+              avatarUrl
+            }
           }
         }
       }

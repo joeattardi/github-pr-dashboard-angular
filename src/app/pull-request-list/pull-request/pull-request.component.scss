@@ -38,10 +38,21 @@
         &:hover {
           text-decoration: underline;
         }
+
+        .pr-title {
+          font-size: 1.25em;
+        }
       }
 
-      .pr-title {
-        font-size: 1.25em;
+      .pr-base-ref {
+        margin-left: 0.5em;
+
+        .pr-branch-name {
+          font-family: 'Courier New', Courier, monospace;
+          background: #EEEEEE;
+          padding: 0.2em;
+          border-radius: 2px;
+        }
       }
     }
 
