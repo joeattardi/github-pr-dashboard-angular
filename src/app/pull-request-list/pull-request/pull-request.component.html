@@ -1,11 +1,14 @@
 <div class="pr-container">
-  <div class="pr-title-container">
-    <a class="pr-title-link" target="_blank" [href]="pullRequest.permalink">
-      <span class="pr-title">{{pullRequest.title}}</span>
-      <fa-icon [icon]="faExternalLinkAlt"></fa-icon>
-    </a>
-  </div>
-  <div class="pr-metadata-container">
-    <span class="repo-name">{{pullRequest.repository.owner.login}}/{{pullRequest.repository.name}}</span>
+  <img class="pr-author-avatar" [src]="pullRequest.author.avatarUrl">
+  <div class="pr-main-content">
+    <div class="pr-title-container">
+      <a class="pr-title-link" target="_blank" [href]="pullRequest.permalink">
+        <span class="pr-title">{{pullRequest.title}}</span>
+        <fa-icon [icon]="faExternalLinkAlt"></fa-icon>
+      </a>
+    </div>
+    <div class="pr-metadata-container">
+      <span class="repo-name">{{pullRequest.repository.owner.login}}/{{pullRequest.repository.name}}</span>
+    </div>
   </div>
 </div>

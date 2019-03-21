@@ -1,4 +1,5 @@
 export interface PullRequest {
+  author: User;
   repository: Repository;
   number: number;
   title: string;

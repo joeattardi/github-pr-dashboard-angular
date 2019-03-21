@@ -1,34 +1,30 @@
 .pr-container {
   border: 1px solid #AAAAAA;
   border-radius: 3px;
-  padding: 0.5em;
+  padding: 0.75em;
   margin: 0.5em;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
 
-  .pr-icon {
-    width: 1em;
-    vertical-align: middle;
+  .pr-author-avatar {
+    width: 3em;
+    height: 3em;
+    border-radius: 50%;
     margin-right: 0.5em;
   }
 
-  .pr-title-link {
-    fa-icon {
-      margin-left: 0.5em;
+  .pr-main-content {
+    display: flex;
+    flex-direction: column;
+
+    .pr-title-link {
+      fa-icon {
+        margin-left: 0.5em;
+      }
     }
-  }
-
-  .pr-title {
-    font-size: 1.25em;
-    vertical-align: middle;
-  }
-
-  .repo-icon {
-    vertical-align: middle;
-    margin-right: 0.5em;
-  }
-
-  .repo-name {
-    vertical-align: middle;
+  
+    .pr-title {
+      font-size: 1.25em;
+    }
   }
 }
