@@ -3,11 +3,11 @@ import { Component, Input } from '@angular/core';
 import { PullRequest } from '../../../../types';
 
 @Component({
-  selector: 'app-pull-request-participants',
-  templateUrl: './pull-request-participants.component.html',
-  styleUrls: ['./pull-request-participants.component.scss']
+  selector: 'pr-participants',
+  templateUrl: './participants.component.html',
+  styleUrls: ['./participants.component.scss']
 })
-export class PullRequestParticipantsComponent {
+export class ParticipantsComponent {
   @Input() pullRequest: PullRequest;
 
   get showOverflow(): boolean {

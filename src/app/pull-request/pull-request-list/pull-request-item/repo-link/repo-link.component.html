@@ -1,0 +1,4 @@
+<fa-icon class="repo-icon" [icon]="faBook"></fa-icon>
+<span class="repo-name">
+  <a target="_blank" [href]="pullRequest.repository.url">{{pullRequest.repository.owner.login}}/{{pullRequest.repository.name}}</a> <span class="pr-number">#{{pullRequest.number}}</span>
+</span>

@@ -1,0 +1,9 @@
+<div class="pr-title-container">
+  <fa-icon [icon]="faCodeBranch"></fa-icon>
+  <a class="pr-title-link" target="_blank" [href]="pullRequest.permalink">
+    <span class="pr-title">{{pullRequest.title}}</span>
+  </a>
+  <span class="pr-base-ref">
+    <fa-icon [icon]="faLongArrowAltRight"></fa-icon> <span class="pr-branch-name">{{pullRequest.baseRefName}}</span>
+  </span>
+</div>
