@@ -15,7 +15,7 @@
       <span class="repo-name">
         <a target="_blank" [href]="pullRequest.repository.url">{{pullRequest.repository.owner.login}}/{{pullRequest.repository.name}}</a> <span class="pr-number">#{{pullRequest.number}}</span>
       </span>
-      <span class="pr-comments">
+      <span class="pr-comments" [title]="commentsTitle">
         <fa-icon [icon]="faComment"></fa-icon> {{pullRequest.comments.totalCount}}
       </span>
       <span class="pr-participants">
@@ -24,7 +24,7 @@
       </span>
     </div>
     <div class="pr-footer">
-      Opened by {{pullRequest.author.login}} <span [title]="pullRequest.createdAt">{{timeSinceCreated}}</span>
+      Created by {{pullRequest.author.login}} <span [title]="pullRequest.createdAt">{{timeSinceCreated}}</span>
     </div>
   </div>
   <div class="pr-updated-at" [title]="pullRequest.updatedAt">

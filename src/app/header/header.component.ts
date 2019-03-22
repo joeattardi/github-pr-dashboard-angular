@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 
-import { faColumns } from '@fortawesome/free-solid-svg-icons';
+import { faCodeBranch } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-header',
@@ -8,5 +8,5 @@ import { faColumns } from '@fortawesome/free-solid-svg-icons';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent {
-  faColumns = faColumns;
+  faCodeBranch = faCodeBranch;
 }

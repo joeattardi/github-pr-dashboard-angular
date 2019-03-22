@@ -30,4 +30,9 @@ export class PullRequestComponent {
   get timeSinceUpdated(): string {
     return dayjs(this.pullRequest.updatedAt).fromNow();
   }
+
+  get commentsTitle(): string {
+    const count = this.pullRequest.comments.totalCount;
+    return count === 1 ? '1 comment' : `${count} comments`;
+  }
 }
