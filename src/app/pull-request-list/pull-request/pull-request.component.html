@@ -18,10 +18,7 @@
       <span class="pr-comments" [title]="commentsTitle">
         <fa-icon [icon]="faComment"></fa-icon> {{pullRequest.comments.totalCount}}
       </span>
-      <span class="pr-participants">
-        <img *ngFor="let participant of pullRequest.participants.nodes" [src]="participant.avatarUrl" [title]="participant.login">
-        <span class="pr-participants-overflow" *ngIf="pullRequest.participants.totalCount > pullRequest.participants.nodes.length">+{{pullRequest.participants.totalCount - 4}}</span>
-      </span>
+      <app-pull-request-participants [pullRequest]="pullRequest"></app-pull-request-participants>
     </div>
     <div class="pr-footer">
       Created by {{pullRequest.author.login}} <span [title]="pullRequest.createdAt">{{timeSinceCreated}}</span>
