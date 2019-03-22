@@ -6,26 +6,19 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
-import { PullRequestComponent } from './pull-request-list/pull-request/pull-request.component';
-import { PullRequestListComponent } from './pull-request-list/pull-request-list.component';
-import {
-  PullRequestParticipantsComponent
-} from './pull-request-list/pull-request/pull-request-participants/pull-request-participants.component';
-import { SpinnerComponent } from './spinner/spinner.component';
+
+import { PullRequestModule } from './pull-request/pull-request.module';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    PullRequestComponent,
-    PullRequestListComponent,
-    PullRequestParticipantsComponent,
-    SpinnerComponent
   ],
   imports: [
     BrowserModule,
     FontAwesomeModule,
-    HttpClientModule
+    HttpClientModule,
+    PullRequestModule
   ],
   providers: [],
   bootstrap: [AppComponent]

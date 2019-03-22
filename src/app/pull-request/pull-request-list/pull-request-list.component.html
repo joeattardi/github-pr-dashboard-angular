@@ -4,6 +4,6 @@
 
 <ul id="pull-request-list">
   <li *ngFor="let pr of pullRequests$ | async">
-    <app-pull-request [pullRequest]="pr"></app-pull-request>
+    <app-pull-request-item [pullRequest]="pr"></app-pull-request-item>
   </li>
 </ul>
