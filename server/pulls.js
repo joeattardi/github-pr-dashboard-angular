@@ -11,7 +11,7 @@ module.exports = async function pulls(req, res) {
 
   const query = `{
     repository(owner: "angular", name: "angular") {
-      pullRequests(states: [OPEN], first: 100, orderBy: { direction: DESC, field: UPDATED_AT }) {
+      pullRequests(states: [OPEN], first: 10, orderBy: { direction: DESC, field: UPDATED_AT }) {
         nodes {
           title
           baseRefName
@@ -33,11 +33,12 @@ module.exports = async function pulls(req, res) {
           comments {
             totalCount
           }
-          participants(first: 5) {
+          participants(first: 4) {
             nodes {
               login
               avatarUrl
             }
+            totalCount
           }
         }
       }

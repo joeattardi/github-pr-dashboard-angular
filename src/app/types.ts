@@ -8,11 +8,12 @@ export interface PullRequest {
   updatedAt: Date;
   permalink: string;
   baseRefName: string;
-  participants: UserList[];
+  participants: UserList;
 }
 
 export interface UserList {
   nodes: User[];
+  totalCount: number;
 }
 
 export interface Repository {
