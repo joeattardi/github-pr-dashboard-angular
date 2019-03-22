@@ -1,8 +1,8 @@
-<div *ngIf="loading">
+<div *ngIf="loading$ | async">
   <app-spinner></app-spinner>
 </div>
 
-<ul id="pull-request-list" *ngIf="!loading">
+<ul id="pull-request-list">
   <li *ngFor="let pr of pullRequests$ | async">
     <app-pull-request [pullRequest]="pr"></app-pull-request>
   </li>

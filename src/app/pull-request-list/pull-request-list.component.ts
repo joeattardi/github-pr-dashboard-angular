@@ -1,6 +1,5 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { Observable, Subject } from 'rxjs';
-import { takeUntil } from 'rxjs/operators';
 
 import { DataService } from '../data.service';
 
@@ -10,7 +9,7 @@ import { DataService } from '../data.service';
   styleUrls: ['./pull-request-list.component.scss']
 })
 export class PullRequestListComponent implements OnDestroy, OnInit {
-  loading = true;
+  loading$: Observable<boolean>;
 
   pullRequests$: Observable<any>;
 
@@ -19,11 +18,8 @@ export class PullRequestListComponent implements OnDestroy, OnInit {
   constructor(private dataService: DataService) {}
 
   ngOnInit(): void {
+    this.loading$ = this.dataService.getLoading();
     this.pullRequests$ = this.dataService.getPullRequests();
-
-    this.pullRequests$
-      .pipe(takeUntil(this.destroy$))
-      .subscribe(() => (this.loading = false));
   }
 
   ngOnDestroy(): void {
