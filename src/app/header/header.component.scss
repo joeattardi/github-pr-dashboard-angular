@@ -2,9 +2,23 @@ header {
   background: url('/assets/prism.png');
   color: #FFFFFF;
   padding: 1em;
+  display: flex;
 
   h1 {
     margin: 0;
     font-size: 1.25em;
+    flex-grow: 1;
+  }
+
+  .toolbar {
+    button {
+      color: #FFFFFF;
+      // border: 1px solid #FFFFFF;
+      margin-right: 0.25em;
+
+      &:hover {
+        background: rgba(255, 255, 255, 0.1);
+      }
+    }
   }
 }

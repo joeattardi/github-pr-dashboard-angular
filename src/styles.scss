@@ -5,3 +5,18 @@ body {
   background: #CCCCCC;
   margin: 0;
 }
+
+button {
+  border: 1px solid #333333;
+  border-radius: 3px;
+  background: transparent;
+  font-size: 1em;
+  font-family: 'Open Sans', sans-serif;
+  cursor: pointer;
+  transition: all 0.2s;
+
+  &:hover {
+    background: #333333;
+    color: #FFFFFF;
+  }
+}
