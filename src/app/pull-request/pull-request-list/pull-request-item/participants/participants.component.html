@@ -1,4 +1,4 @@
 <span class="pr-participants">
-  <img *ngFor="let participant of pullRequest.participants.nodes" [src]="participant.avatarUrl" [title]="participant.login">
-  <span [title]="overflowTitle" class="pr-participants-overflow" *ngIf="showOverflow">+{{overflowCount}}</span>
+  <img *ngFor="let participant of pullRequest.participants.nodes" [src]="participant.avatarUrl" [appTooltip]="participant.login">
+  <span [appTooltip]="overflowTitle" class="pr-participants-overflow" *ngIf="showOverflow">+{{overflowCount}}</span>
 </span>

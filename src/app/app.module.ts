@@ -8,6 +8,7 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 
 import { PullRequestModule } from './pull-request/pull-request.module';
+import { SharedModule } from './shared/shared.module';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { PullRequestModule } from './pull-request/pull-request.module';
     BrowserModule,
     FontAwesomeModule,
     HttpClientModule,
-    PullRequestModule
+    PullRequestModule,
+    SharedModule
   ],
   providers: [],
   bootstrap: [AppComponent]
